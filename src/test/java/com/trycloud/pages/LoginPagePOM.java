@@ -3,7 +3,7 @@ package com.trycloud.pages;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import sun.java2d.loops.DrawRect;
+
 
 public class LoginPagePOM {
 
@@ -25,8 +25,8 @@ public class LoginPagePOM {
     WebElement buttonTryCloudLogo = Driver.getDriver().findElement(By.xpath("//div[@class='logo logo-icon']"));
 
     public void buttonDashbordClick(){ buttonDashbord.click(); }
-    public void buttonFileClick(){ buttonFileClick();}
-    public void buttonPictureClick(){ buttonPictureClick();}
+    public void buttonFileClick(){ buttonFile.click();}
+    public void buttonPictureClick(){ buttonPicture.click();}
     public void buttonActivityClick() {
         buttonActivity.click();
     }

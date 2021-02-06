@@ -10,7 +10,6 @@ public class BrowserUtils {
 
 
     public static void sleep(int seconds){
-
         seconds*=1000;
 
         try{
@@ -19,9 +18,6 @@ public class BrowserUtils {
         }catch (InterruptedException e){
             System.out.println("something happen in sleep method");
         }
-
-
-
     }
 
     public static void hoover(WebElement element) {

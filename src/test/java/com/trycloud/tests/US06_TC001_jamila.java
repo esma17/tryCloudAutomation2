@@ -22,14 +22,15 @@ public  class US06_TC001_jamila extends TestBase {
         LoginPagePOM loginPagePOM;
         loginPagePOM = new LoginPagePOM();
 
-        PageFactory.initElements(Driver.getDriver(),loginPagePOM);
+        //PageFactory.initElements(Driver.getDriver(),loginPagePOM);
+       loginPagePOM.buttonFileClick();
         WebElement addButton = Driver.getDriver().findElement(By.xpath("//a[@class='button new']"));
         // click add button
         addButton.click();
 
 
         // click "New Folder" button
-        Driver.getDriver().findElement(By.xpath("//input[@id='view13-input-folder']"));
+        Driver.getDriver().findElement(By.xpath("//span[.='New folder']")).click();
 
         // write a folder name
         String folderName = "test" + LocalTime.now().getNano(); // adding time stamp to the file name to make it unique everytime
