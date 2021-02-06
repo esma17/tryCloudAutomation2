@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import sun.java2d.loops.DrawRect;
 
-class LogInPagePOM {
+class LoginPagePOM {
+
     WebElement buttonDashbord= Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[1]"));
     WebElement buttonFile = Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[2]"));
     WebElement buttonPicture = Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[3]"));
