@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import sun.java2d.loops.DrawRect;
 
-class LoginPagePOM {
+public class LoginPagePOM {
 
     WebElement buttonDashbord= Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[1]"));
     WebElement buttonFile = Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[2]"));
@@ -20,7 +20,7 @@ class LoginPagePOM {
 
     WebElement buttonSearch= Driver.getDriver().findElement(By.xpath("//div[@class='header-menu unified-search']"));
     WebElement buttonNotification= Driver.getDriver().findElement(By.xpath("//div[@class='notifications-button menutoggle']"));
-    WebElement buttonContactMenu= Driver.getDriver().findElement(By.xpath("icon-contacts menutoggle"));
+    WebElement buttonContactMenu= Driver.getDriver().findElement(By.id("contactsmenu"));
     WebElement buttonMenuToggle = Driver.getDriver().findElement(By.xpath("//div[@class='menutoggle']"));
     WebElement buttonTryCloudLogo = Driver.getDriver().findElement(By.xpath("//div[@class='logo logo-icon']"));
 
