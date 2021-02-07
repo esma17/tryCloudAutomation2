@@ -51,7 +51,3 @@ public class US004_TC002_esma extends TestBase {
         Driver.closeDriver();
     }
 }
-
-class TalkPage {
-
-}
