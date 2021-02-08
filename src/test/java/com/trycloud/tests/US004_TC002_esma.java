@@ -19,7 +19,6 @@ public class US004_TC002_esma extends TestBase {
 
     @Test(description = "Validation of users can send message via Talk module by searching name")
     public void t1() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 15);
 //        1. Login as a user
         login();
 //        2. Click Talks module
@@ -28,7 +27,7 @@ public class US004_TC002_esma extends TestBase {
 
         // 3. Search a user from search box on the left
         WebElement searchBox = driver.findElement(By.xpath("//input[contains(@placeholder,'Search conversations')]"));
-        String searchInput = "User60";
+        String searchInput = "User100";
         //used dynamic wait for sending searInput
         sendTheKeys(searchBox, 15, searchInput);
 
@@ -45,9 +44,8 @@ public class US004_TC002_esma extends TestBase {
         sendTheKeys(messageBox, 15, message);
 //        5. Click submit button
         WebElement buttonSubmit = driver.findElement(By.xpath("//button[@aria-label='Send message']"));
-        // ****I tried to use dynamic wait but didnt work with the ones I found***
-        BrowserUtils.sleep(6);
-        buttonSubmit.click();
+        //used dynamic wait method
+      BrowserUtils.clickOn(buttonSubmit,20);
 //        6. Verify the message is displayed on the conversation log
 
 //        The message that we send it displayed with this locator %s--> will be the text we sent
@@ -56,8 +54,7 @@ public class US004_TC002_esma extends TestBase {
         WebElement messageSent = driver.findElement(By.xpath(String.format(messageSentText, message)));
         //will get the text as string from the webelement to verify with message
         String actualResult = messageSent.getText();
-        // ****I tried to use dynamic wait but didnt work with the ones I found***
-        BrowserUtils.sleep(6);
+
         //I want to assert that the actualResult is equals to the message we sent
         Assert.assertEquals(actualResult, (message));
 
@@ -70,6 +67,7 @@ public class US004_TC002_esma extends TestBase {
                 ExpectedConditions.elementToBeClickable(element)));
         element.sendKeys(text);
     }
+
 }
 
 
