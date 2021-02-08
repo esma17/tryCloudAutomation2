@@ -29,12 +29,13 @@ public class BrowserUtils {
         actions.moveToElement(element).perform();
     }
 
-    public static void clickOn(WebElement element, int timeout) {
-        final WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
+    public static void clickOn(WebElement element, int timeout,WebDriver driver) {
+        final WebDriverWait wait = new WebDriverWait( driver, timeout);
         wait.until(ExpectedConditions.refreshed(
                 ExpectedConditions.elementToBeClickable(element)));
         element.click();
     }
+
 
 
 
