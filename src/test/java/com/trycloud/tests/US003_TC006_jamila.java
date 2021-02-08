@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.time.LocalTime;
 
-public  class US06_TC001_jamila extends TestBase {
+public  class US003_TC006_jamila extends TestBase {
 
 
     @Test ( description = "TC001")
